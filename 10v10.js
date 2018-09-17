@@ -85,13 +85,14 @@ var team2 = [
 ];
 
 function render() {
-
+    //remove negative numbers and replace them with 0
     for(let i = 0; i < team1.length; i++) {
         if (team1[i].health < 0) {
             team1[i].health = 0;
         }
     }
     
+    //remove negative numbers and replace them with 0
     for(let i = 0; i < team2.length; i++) {
         if (team2[i].health < 0) {
             team2[i].health = 0;
