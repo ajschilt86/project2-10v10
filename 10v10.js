@@ -1,86 +1,86 @@
 var team1 = [
     {   name: "unit1",
-        health: 1000,
-        attack: 25
+        health: 350,
+        attack: Math.ceil(Math.random()*50)
     },
     {   name: "unit2", 
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit3",
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit4",
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit5", 
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit6",
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit7",
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit8",
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit9", 
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit10",
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     }
 ];
 
 var team2 = [
     {   name: "unit1",
-        health: 1000,
-        attack: 25
+        health: 350,
+        attack: Math.ceil(Math.random()*50)
     },
     {   name: "unit2", 
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit3",
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit4",
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit5", 
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit6",
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit7",
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit8",
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit9", 
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     },
     {   name: "unit10",
         health: 100,
-        attack: 10
+        attack: Math.ceil(Math.random()*10)
     }
 ];
 
@@ -117,7 +117,7 @@ $(".fight").click(function() {
         // generate rolls for both teams
         let t1DiceRoll = Math.ceil(Math.random()*6);
         let t2DiceRoll = Math.ceil(Math.random()*6);
-
+        console.log(team1[0].attack);
         // checks to makes sure both units have health
         if (team1[i].health > 0 && team2[i].health > 0) {
             // checks to see if team1 attacks, defender does not attack
