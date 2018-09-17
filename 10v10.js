@@ -170,6 +170,12 @@ $(".fight").click(function() {
                     }
                 }
             } 
+        } 
+
+        else {
+            $(".fight").hide();
+            $(".crit").html("<h1>Good Game!</h1>");
+
         }
     }   
 }); 
