@@ -1,7 +1,7 @@
 var team1 = [
     {   name: "unit1",
         health: 350,
-        attack: Math.ceil(Math.random()*50)
+        attack: Math.ceil(Math.random()*50+10)
     },
     {   name: "unit2", 
         health: 100,
@@ -44,7 +44,7 @@ var team1 = [
 var team2 = [
     {   name: "unit1",
         health: 350,
-        attack: Math.ceil(Math.random()*50)
+        attack: Math.ceil(Math.random()*50+10)
     },
     {   name: "unit2", 
         health: 100,
@@ -149,8 +149,8 @@ $(".fight").click(function() {
                         render();
                     }
                 }
-            } 
-        // check if team 2 unit has health and team 1 has no health
+            }
+        // check if team 2 unit has health and team 1 has no health 
         } else if (team1[i].health <= 0  && team2[i].health > 0) {
             // find opponent that has health
             for(let c = 0; c < team1.length; c++) {
