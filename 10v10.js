@@ -3,61 +3,61 @@ var team1 = [
         health: 350,
         attack: Math.ceil(Math.random()*40+10),
         defense: Math.random().toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "F-15 Eagle", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "F-15 Eagle",
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "F-15 Eagle",
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "F-15 Eagle", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "F-15 Eagle",
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "F-15 Eagle",
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "F-15 Eagle",
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "F-15 Eagle", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "F-15 Eagle",
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     }
 ];
 
@@ -66,61 +66,61 @@ var team2 = [
         health: 350,
         attack: Math.ceil(Math.random()*40+10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "Su-35 Flanker-E", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "Su-35 Flanker-E",
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "Su-35 Flanker-E",
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "Su-35 Flanker-E", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "Su-35 Flanker-E",
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "Su-35 Flanker-E",
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "Su-35 Flanker-E",
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "Su-35 Flanker-E", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     },
     {   name: "Su-35 Flanker-E",
         health: 100,
         attack: Math.ceil(Math.random()*10),
         defense: (Math.random() * .9).toFixed(2),
-        critical: Math.random()
+        critical: Math.random() *.35
     }
 ];
 
