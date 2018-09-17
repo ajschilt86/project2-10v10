@@ -154,28 +154,6 @@ function render() {
         }
         $(".team2unit" + i).html(team2[i].name + " | health: " + team2[i].health + " <br>(Attack: " + team2[i].attack + ")(Block: " + (team2[i].defense * 100).toFixed(0) + "%) (Crit Hit: " + (team2[i].critical * 100).toFixed(0) + "%)");
     }
-
-    // $(".team1unit0").html("health: " + team1[0].health + " (Attack: " + team1[0].attack + ")");
-    // $(".team1unit1").html(team1[1].health);
-    // $(".team1unit2").html(team1[2].health);
-    // $(".team1unit3").html(team1[3].health);
-    // $(".team1unit4").html(team1[4].health);
-    // $(".team1unit5").html(team1[5].health);
-    // $(".team1unit6").html(team1[6].health);
-    // $(".team1unit7").html(team1[7].health);
-    // $(".team1unit8").html(team1[8].health);
-    // $(".team1unit9").html(team1[9].health);
-    // //display team 2 health
-    // $(".team2unit0").html(team2[0].health);
-    // $(".team2unit1").html(team2[1].health);
-    // $(".team2unit2").html(team2[2].health);
-    // $(".team2unit3").html(team2[3].health);
-    // $(".team2unit4").html(team2[4].health);
-    // $(".team2unit5").html(team2[5].health);
-    // $(".team2unit6").html(team2[6].health);
-    // $(".team2unit7").html(team2[7].health);
-    // $(".team2unit8").html(team2[8].health);
-    // $(".team2unit9").html(team2[9].health);
 }
 
 render();
