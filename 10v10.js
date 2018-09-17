@@ -1,5 +1,5 @@
 var team1 = [
-    {   name: "general1",
+    {   name: "E-3 Sentry AWACS",
         health: 350,
         attack: Math.ceil(Math.random()*40+10),
         defense: Math.random().toFixed(2),
@@ -62,7 +62,7 @@ var team1 = [
 ];
 
 var team2 = [
-    {   name: "general1",
+    {   name: "Beriev A-50 AWACS",
         health: 350,
         attack: Math.ceil(Math.random()*40+10),
         defense: Math.random().toFixed(2),
@@ -144,7 +144,7 @@ function render() {
         if(team1[i].health <= 0) {
             $(".team1unit" + i).hide();    
         }
-        $(".team1unit" + i).html(team1[i].name + " | health: " + team1[i].health + " <br>(Attack: " + team1[i].attack + ")(Block: " + (team1[i].defense * 100).toFixed(0) + "%) (Crit Hit: " + (team1[i].critical * 100).toFixed(0) + "%)");
+        $(".team1unit" + i).html(team1[i].name + " | health: " + team1[i].health + " <br>(Attack: " + team1[i].attack + ")(Block: " + (team1[i].defense * 100).toFixed(0) + "%)(Crit Hit: " + (team1[i].critical * 100).toFixed(0) + "%)");
     }
 
     //display team 2 health
@@ -152,7 +152,7 @@ function render() {
         if(team2[i].health <= 0) {
             $(".team2unit" + i).hide();    
         }
-        $(".team2unit" + i).html(team2[i].name + " | health: " + team2[i].health + " <br>(Attack: " + team2[i].attack + ")(Block: " + (team2[i].defense * 100).toFixed(0) + "%) (Crit Hit: " + (team2[i].critical * 100).toFixed(0) + "%)");
+        $(".team2unit" + i).html(team2[i].name + " | health: " + team2[i].health + " <br>(Attack: " + team2[i].attack + ")(Block: " + (team2[i].defense * 100).toFixed(0) + "%)(Crit Hit: " + (team2[i].critical * 100).toFixed(0) + "%)");
     }
 }
 
