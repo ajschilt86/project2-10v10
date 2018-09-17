@@ -193,7 +193,7 @@ $(".fight").click(function() {
             if(t1DiceRoll > t2DiceRoll) {
                 if (Math.random() < team2[i].defense) {
                     // team 2 defends attack
-                    team2[i].health = team2[i].health;
+                    team2[i].health = team2[i].health - 1;
                 } else {
                     if (Math.random() < team2[i].critical) {
                         // team 1 unit attacks team 2 unit with critical hit
@@ -208,7 +208,7 @@ $(".fight").click(function() {
             } else {
                 if (Math.random() < team1[i].defense) {
                     //team 1 defends attack
-                    team1[i].health = team1[i].health;
+                    team1[i].health = team1[i].health - 1;
                 } else {
                     if (Math.random() < team1[i].critical) {
                         //team 2 unit attacks team 1 unit with critical attack
@@ -229,7 +229,7 @@ $(".fight").click(function() {
                     if(t1DiceRoll > t2DiceRoll) {
                         if (Math.random() < team2[i].defense) {
                             // team 2 defends attack
-                            team2[i].health = team2[i].health;
+                            team2[i].health = team2[i].health - 1;
                         } else {
                             if (Math.random() < team2[i].critical) {
                                 // team 1 unit attacks team 2 unit with critical hit
@@ -243,7 +243,7 @@ $(".fight").click(function() {
                     } else {
                         if (Math.random() < team1[i].defense) {
                             //team 1 defends attack
-                            team1[i].health = team1[i].health;
+                            team1[i].health = team1[i].health - 1;
                         } else {
                             if (Math.random() < team1[i].critical) {
                                 //team 2 unit attacks team 1 unit with critical attack
@@ -266,7 +266,7 @@ $(".fight").click(function() {
                     if(t2DiceRoll > t1DiceRoll) {
                         if (Math.random() < team1[i].defense) {
                             //team 1 defends attack
-                            team1[i].health = team1[i].health;
+                            team1[i].health = team1[i].health - 1;
                         } else {
                             if (Math.random() < team1[i].critical) {
                                 //team 2 unit attacks team 1 unit with critical attack
@@ -282,7 +282,7 @@ $(".fight").click(function() {
                     } else {
                         if (Math.random() < team2[i].defense) {
                             // team 2 defends attack
-                            team2[i].health = team2[i].health;
+                            team2[i].health = team2[i].health - 1;
                         } else {
                             if (Math.random() < team2[i].critical) {
                                 // team 1 unit attacks team 2 unit with critical hit
