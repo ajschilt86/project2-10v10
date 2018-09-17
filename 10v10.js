@@ -2,61 +2,61 @@ var team1 = [
     {   name: "general1",
         health: 350,
         attack: Math.ceil(Math.random()*40+10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit2", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit3",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit4",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit5", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit6",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit7",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit8",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit9", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit10",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     }
 ];
@@ -65,61 +65,61 @@ var team2 = [
     {   name: "general1",
         health: 350,
         attack: Math.ceil(Math.random()*40+10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit2", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit3",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit4",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit5", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit6",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit7",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit8",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit9", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     },
     {   name: "unit10",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.random(),
+        defense: Math.random().toFixed(2),
         critical: Math.random()
     }
 ];
@@ -144,7 +144,7 @@ function render() {
         if(team1[i].health <= 0) {
             $(".team1unit" + i).hide();    
         }
-        $(".team1unit" + i).html(team1[i].name + " | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")");
+        $(".team1unit" + i).html(team1[i].name + " | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")(Block: " + team1[i].defense + ")");
     }
 
     //display team 2 health
@@ -152,7 +152,7 @@ function render() {
         if(team2[i].health <= 0) {
             $(".team2unit" + i).hide();    
         }
-        $(".team2unit" + i).html(team2[i].name + " | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")");
+        $(".team2unit" + i).html(team2[i].name + " | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")(Block: " + team2[i].defense + ")");
     }
 
     // $(".team1unit0").html("health: " + team1[0].health + " (Attack: " + team1[0].attack + ")");
