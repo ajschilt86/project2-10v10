@@ -147,7 +147,7 @@ $(".fight").click(function() {
                         render();
                     } else {
                         team1[i].health = team1[i].health - team2[b].attack;
-                        // display health of team 2 unit
+                        // display health of team 1 unit
                         render();
                     }
                 }
@@ -159,12 +159,12 @@ $(".fight").click(function() {
             for(let c = 0; c < team1.length; c++) {
                 if (team1[c].health > 0) {
                     // if team 1 roll is greater than team 2, team 1 attacks team 2
-                    if(t1DiceRoll > t2DiceRoll) {
-                        team1[i].health = team1[i].health - team2[c].attack;
-                        // display health of team 2 unit
+                    if(t2DiceRoll > t1DiceRoll) {
+                        team1[c].health = team1[c].health - team2[i].attack;
+                        // display health of team 1 unit
                         render();
                     } else {
-                        team2[c].health = team2[c].health - team1[i].attack;
+                        team2[i].health = team2[i].health - team1[c].attack;
                         // display health of team 2 unit
                         render();
                     }
