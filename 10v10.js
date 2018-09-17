@@ -1,7 +1,7 @@
 var team1 = [
-    {   name: "unit1",
+    {   name: "general1",
         health: 350,
-        attack: Math.ceil(Math.random()*50+10)
+        attack: Math.ceil(Math.random()*40+10)
     },
     {   name: "unit2", 
         health: 100,
@@ -42,9 +42,9 @@ var team1 = [
 ];
 
 var team2 = [
-    {   name: "unit1",
+    {   name: "general1",
         health: 350,
-        attack: Math.ceil(Math.random()*50+10)
+        attack: Math.ceil(Math.random()*40+10)
     },
     {   name: "unit2", 
         health: 100,
@@ -104,14 +104,14 @@ function render() {
         if(team1[i].health <= 0) {
             $(".team1unit" + i).hide();    
         }
-        $(".team1unit" + i).html("health: " + team1[i].health + " (Attack: " + team1[i].attack + ")");
+        $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")");
     }
 
     for (let i = 0; i < team2.length; i++) {
         if(team2[i].health <= 0) {
             $(".team2unit" + i).hide();    
         }
-        $(".team2unit" + i).html("health: " + team2[i].health + " (Attack: " + team2[i].attack + ")");
+        $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")");
     }
 
     // $(".team1unit0").html("health: " + team1[0].health + " (Attack: " + team1[0].attack + ")");
