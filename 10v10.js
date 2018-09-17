@@ -180,13 +180,7 @@ $(".fight").click(function() {
         for(let i = 0; i < team2.length; i++) {
             tTwoTotalHealth += team2[i].health;
         }
-
         if (tOneTotalHealth <= 0 || tTwoTotalHealth <=0) {
-
-
-            console.log("team 1: " + tOneTotalHealth);
-            console.log("team 2: " + tTwoTotalHealth);
-
             $(".fight").hide();
             $(".crit").html("<h1>Good Game!</h1>");
         }
