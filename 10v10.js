@@ -1,85 +1,85 @@
 var team1 = [
     {   name: "unit1",
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit2", 
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit3",
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit4",
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit5", 
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit6",
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit7",
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit8",
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit9", 
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit10",
-        health: 50,
+        health: 100,
         attack: 10
     }
 ];
 
 var team2 = [
     {   name: "unit1",
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit2", 
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit3",
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit4",
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit5", 
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit6",
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit7",
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit8",
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit9", 
-        health: 50,
+        health: 100,
         attack: 10
     },
     {   name: "unit10",
-        health: 50,
+        health: 100,
         attack: 10
     }
 ];
@@ -172,50 +172,10 @@ $(".fight").click(function() {
             } 
         } 
 
-        else {
-            $(".fight").hide();
-            $(".crit").html("<h1>Good Game!</h1>");
+        // else {
+        //     $(".fight").hide();
+        //     $(".crit").html("<h1>Good Game!</h1>");
 
-        }
+        // }
     }   
 }); 
-
-
-
-
-
-// if both teams have health
-// if team 1 has health and team 2 does not
-// if team 2 has health and team 1 does not
-
-
-
-
-
-
-
-
-
-// if (team1[i].health > 0) {
-//     for (let ii = 0; ii < team2.length; ii++) {
-//         if (team2[ii].health > 0) {
-//             team2[ii].health = team2[ii].health - team1[i].attack;
-//             $(".team2unit" + [ii + 1]).text(team2[i].health);
-//         } 
-//     }
-// } else {
-//     team1[i].health = team1[i].health - team2[i].attack;
-//     $(".team1unit" + [i]).text(team1[i].health);
-// }
-
-// if (team2[i].health > 0) {
-//     for (let iii = 0; iii < team2.length; iii++) {
-//         if (team1[iii].health > 0) {
-//             team1[iii].health = team1[iii].health - team2[i].attack;
-//             $(".team1unit" + [iii + 1]).text(team1[i].health);
-//         } else {
-//             team2[iii].health = team2[iii].health - team1[i].attack;
-//             $(".team2unit" + [i]).text(team2[i].health);
-//         }
-//     }
-// }
