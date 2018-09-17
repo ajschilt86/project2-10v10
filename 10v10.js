@@ -117,7 +117,10 @@ $(".fight").click(function() {
         // generate rolls for both teams
         let t1DiceRoll = Math.ceil(Math.random()*6);
         let t2DiceRoll = Math.ceil(Math.random()*6);
-        console.log(team1[0].attack);
+        var tOneTotalHealth = 0;
+        var tTwoTotalHealth = 0;
+
+
         // checks to makes sure both units have health
         if (team1[i].health > 0 && team2[i].health > 0) {
             // checks to see if team1 attacks, defender does not attack
@@ -171,5 +174,21 @@ $(".fight").click(function() {
                 }
             } 
         } 
+        for(let i = 0; i < team1.length; i++) {
+            tOneTotalHealth += team1[i].health;
+        }
+        for(let i = 0; i < team2.length; i++) {
+            tTwoTotalHealth += team2[i].health;
+        }
+
+        if (tOneTotalHealth <= 0 || tTwoTotalHealth <=0) {
+
+
+            console.log("team 1: " + tOneTotalHealth);
+            console.log("team 2: " + tTwoTotalHealth);
+
+            $(".fight").hide();
+            $(".crit").html("<h1>Good Game!</h1>");
+        }
     }   
 }); 
