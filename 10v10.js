@@ -144,7 +144,7 @@ function render() {
         if(team1[i].health <= 0) {
             $(".team1unit" + i).hide();    
         }
-        $(".team1unit" + i).html(team1[i].name + " | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")(Block: " + team1[i].defense + ")");
+        $(".team1unit" + i).html(team1[i].name + " | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")(Block: " + (team1[i].defense * 100).toFixed(0) + "%)");
     }
 
     //display team 2 health
@@ -152,7 +152,7 @@ function render() {
         if(team2[i].health <= 0) {
             $(".team2unit" + i).hide();    
         }
-        $(".team2unit" + i).html(team2[i].name + " | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")(Block: " + team2[i].defense + ")");
+        $(".team2unit" + i).html(team2[i].name + " | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")(Block: " + (team2[i].defense * 100).toFixed(0) + "%)");
     }
 
     // $(".team1unit0").html("health: " + team1[0].health + " (Attack: " + team1[0].attack + ")");
