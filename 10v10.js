@@ -85,6 +85,19 @@ var team2 = [
 ];
 
 function render() {
+
+    for(let i = 0; i < team1.length; i++) {
+        if (team1[i].health < 0) {
+            team1[i].health = 0;
+        }
+    }
+    
+    for(let i = 0; i < team2.length; i++) {
+        if (team2[i].health < 0) {
+            team2[i].health = 0;
+        }
+    }
+
     //display team 1 health
     $(".team1unit0").html(team1[0].health);
     $(".team1unit1").html(team1[1].health);
