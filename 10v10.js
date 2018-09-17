@@ -133,10 +133,8 @@ $(".fight").click(function() {
                 // outputs new health for team 2
                 render();
             }
-        }
-        
         // check if team 1 unit has health and team 2 has no health
-        else if (team1[i].health > 0 && team2[i].health <= 0) {
+        } else if (team1[i].health > 0 && team2[i].health <= 0) {
             // find opponent that has health
             for(let b = 0; b < team2.length; b++) {
                 if (team2[b].health > 0) {
@@ -152,9 +150,8 @@ $(".fight").click(function() {
                     }
                 }
             } 
-        } 
-        
-        else if (team1[i].health <= 0  && team2[i].health > 0) {
+        // check if team 2 unit has health and team 1 has no health
+        } else if (team1[i].health <= 0  && team2[i].health > 0) {
             // find opponent that has health
             for(let c = 0; c < team1.length; c++) {
                 if (team1[c].health > 0) {
