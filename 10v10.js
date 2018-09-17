@@ -1,7 +1,7 @@
 var team1 = [
     {   name: "unit1",
-        health: 100,
-        attack: 10
+        health: 1000,
+        attack: 25
     },
     {   name: "unit2", 
         health: 100,
@@ -43,8 +43,8 @@ var team1 = [
 
 var team2 = [
     {   name: "unit1",
-        health: 100,
-        attack: 10
+        health: 1000,
+        attack: 25
     },
     {   name: "unit2", 
         health: 100,
@@ -171,11 +171,5 @@ $(".fight").click(function() {
                 }
             } 
         } 
-
-        // else {
-        //     $(".fight").hide();
-        //     $(".crit").html("<h1>Good Game!</h1>");
-
-        // }
     }   
 }); 
