@@ -1,5 +1,5 @@
 var team1 = [
-    {   name: "E-3 Sentry AWACS",
+    {   name: "B-1 Lancer (General)",
         health: 350,
         attack: Math.ceil(Math.random()*40+10),
         defense: Math.random().toFixed(2),
@@ -62,7 +62,7 @@ var team1 = [
 ];
 
 var team2 = [
-    {   name: "Beriev A-50 AWACS",
+    {   name: "Tu-160 White Swan (General)",
         health: 350,
         attack: Math.ceil(Math.random()*40+10),
         defense: Math.random().toFixed(2),
