@@ -2,62 +2,62 @@ var team1 = [
     {   name: "general1",
         health: 350,
         attack: Math.ceil(Math.random()*40+10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit2", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit3",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit4",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit5", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit6",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit7",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit8",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit9", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit10",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     }
 ];
 
@@ -65,62 +65,62 @@ var team2 = [
     {   name: "general1",
         health: 350,
         attack: Math.ceil(Math.random()*40+10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit2", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit3",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit4",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit5", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit6",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit7",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit8",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit9", 
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     },
     {   name: "unit10",
         health: 100,
         attack: Math.ceil(Math.random()*10),
-        defense: Math.ceil(Math.random()),
-        critical: Math.ceil(Math.random())
+        defense: Math.random(),
+        critical: Math.random()
     }
 ];
 
@@ -191,38 +191,42 @@ $(".fight").click(function() {
         if (team1[i].health > 0 && team2[i].health > 0) {
             // checks to see if team1 attacks, defender does not attack
             if(t1DiceRoll > t2DiceRoll) {
-                if (Math.random() < .2) {
+                if (Math.random() < team2[i].defense) {
                     // team 2 defends attack
                     team2[i].health = team2[i].health;
+                    $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")" + " Block!");
                 } else {
-                    if (Math.random() < .2) {
+                    if (Math.random() < team2[i].critical) {
                         // team 1 unit attacks team 2 unit with critical hit
                         team2[i].health = team2[i].health - (team1[i].attack + 25);
+                        $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")" + " Critical Hit!");
+                        $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")");
                     } else {
                         // team 1 unit attacks team 2 unit
                         team2[i].health = team2[i].health - team1[i].attack;
+                        $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")" + " Hit!");
+                        $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")");
                     }
                 }
-
-                
-                //outputs new health for team 2
-                render();
             // checks to see if team2 attacks, defender does not attack
             } else {
-                if (Math.random() < .2) {
+                if (Math.random() < team1[i].defense) {
                     //team 1 defends attack
                     team1[i].health = team1[i].health;
+                    $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")" + " Block!");
                 } else {
-                    if (Math.random() < .2) {
+                    if (Math.random() < team1[i].critical) {
                         //team 2 unit attacks team 1 unit with critical attack
                         team1[i].health = team1[i].health - (team2[i].attack + 25);
+                        $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")" + " Critical Hit!");
+                        $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")");
                     } else {
                         //team 2 unit attack team 1 unit
                         team1[i].health = team1[i].health - team2[i].attack;
+                        $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")" + " Hit!");
+                        $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")");
                     }
                 }
-                // outputs new health for team 2
-                render();
             }
         // check if team 1 unit has health and team 2 has no health
         } else if (team1[i].health > 0 && team2[i].health <= 0) {
@@ -231,36 +235,42 @@ $(".fight").click(function() {
                 if (team2[b].health > 0) {
                     // if team 1 roll is greater than team 2, team 1 attacks team 2
                     if(t1DiceRoll > t2DiceRoll) {
-                        if (Math.random() < .2) {
+                        if (Math.random() < team2[i].defense) {
                             // team 2 defends attack
                             team2[i].health = team2[i].health;
+                            $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")" + " Block!");
                         } else {
-                            if (Math.random() < .2) {
+                            if (Math.random() < team2[i].critical) {
                                 // team 1 unit attacks team 2 unit with critical hit
                                 team2[i].health = team2[i].health - (team1[i].attack + 25);
+                                $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")" + " Critical Hit!");
+                                $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")");
                             } else {
                                 // team 1 unit attacks team 2 unit
                                 team2[i].health = team2[i].health - team1[i].attack;
+                                $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")" + " Hit!");
+                                $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")");
                             }
                         }
-                        // display health of team 2 unit
-                        render();
                     } else {
-                        if (Math.random() < .2) {
+                        if (Math.random() < team1[i].defense) {
                             //team 1 defends attack
                             team1[i].health = team1[i].health;
+                            $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")" + " Block!");
                         } else {
-                            if (Math.random() < .2) {
+                            if (Math.random() < team1[i].critical) {
                                 //team 2 unit attacks team 1 unit with critical attack
                                 team1[i].health = team1[i].health - (team2[i].attack + 25);
+                                $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")" + " Critical Hit!");
+                                $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")");
                             } else {
                                 //team 2 unit attack team 1 unit
                                 team1[i].health = team1[i].health - team2[i].attack;
+                                $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")" + " Hit!");
+                                $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")");
                             }
                         }
-                        // display health of team 1 unit
-                        render();
-                    }
+                }
                 }
             }
         // check if team 2 unit has health and team 1 has no health 
@@ -270,35 +280,45 @@ $(".fight").click(function() {
                 if (team1[c].health > 0) {
                     // if team 1 roll is greater than team 2, team 1 attacks team 2
                     if(t2DiceRoll > t1DiceRoll) {
-                        if (Math.random() < .2) {
+                        if (Math.random() < team1[i].defense) {
                             //team 1 defends attack
                             team1[i].health = team1[i].health;
+                            $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")" + " Block!");
                         } else {
-                            if (Math.random() < .2) {
+                            if (Math.random() < team1[i].critical) {
                                 //team 2 unit attacks team 1 unit with critical attack
                                 team1[i].health = team1[i].health - (team2[i].attack + 25);
+                                $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")" + " Critical Hit!");
+                                $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")");
                             } else {
                                 //team 2 unit attack team 1 unit
                                 team1[i].health = team1[i].health - team2[i].attack;
+                                $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")" + " Hit!");
+                                $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")");
                             }
                         }
                         // display health of team 1 unit
-                        render();
+
                     } else {
-                        if (Math.random() < .2) {
+                        if (Math.random() < team2[i].defense) {
                             // team 2 defends attack
                             team2[i].health = team2[i].health;
+                            $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")" + " Block!");
                         } else {
-                            if (Math.random() < .2) {
+                            if (Math.random() < team2[i].critical) {
                                 // team 1 unit attacks team 2 unit with critical hit
                                 team2[i].health = team2[i].health - (team1[i].attack + 25);
+                                $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")" + " Critical Hit!");
+                                $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")");
                             } else {
                                 // team 1 unit attacks team 2 unit
                                 team2[i].health = team2[i].health - team1[i].attack;
+                                $(".team1unit" + i).html("F-16 | health: " + team1[i].health + " (Attack: " + team1[i].attack + ")" + " Hit!");
+                                $(".team2unit" + i).html("Su-35 | health: " + team2[i].health + " (Attack: " + team2[i].attack + ")");
                             }
                         }
                         // display health of team 2 unit
-                        render();
+
                     }
                 }
             } 
