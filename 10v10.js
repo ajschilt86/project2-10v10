@@ -143,7 +143,33 @@ var team2 = [
 		critical: Math.random() * .35
 	}
 ];
-
+function hpBars(i) {
+	if (team1[i].health >= 50) {
+		$(".team1unitHP" + i).css("background-color", "green").css("width", "100%");
+	}
+	if (team1[i].health < 50) {
+		$(".team1unitHP" + i).css("background-color", "red").css("width", "50%");
+	}
+    
+	if (team2[i].health >= 50) {
+		$(".team2unitHP" + i).css("background-color", "green").css("width", "100%");
+	}
+	if (team2[i].health < 50) {
+		$(".team2unitHP" + i).css("background-color", "red").css("width", "50%");
+	}
+	// if (team1[i].health <= 80 && team1[i].health > 60) {
+	// 	$(".team1unitHP" + i).css("background-color", "pink").css("width", "80%");
+	// }
+	// if (team1[i].health <= 60 && team1[i].health > 40) {
+	// 	$(".team1unitHP" + i).css("background-color", "pink").css("width", "60%");
+	// }
+	// if (team2[i].health <= 40 && team1[i].health > 20) {
+	// 	$(".team1unitHP" + i).css("background-color", "pink").css("width", "40%");
+	// }
+	// if (team1[i].health <= 20 && team1[i].health > 0) {
+	// 	$(".team1unitHP" + i).css("background-color", "pink").css("width", "20%");
+	// }
+}
 function render() {
 	//remove negative numbers and replace them with 0
 	for (let i = 0; i < team1.length; i++) {
@@ -177,24 +203,9 @@ function render() {
                 + (team1[i].defense * 100).toFixed(0) + "%)(Crit Hit: "
                 + (team1[i].critical * 100).toFixed(0) + "%)</p></div");
 			// $(".team1unit" + i).html(team1[i].name + " | health: " + team1[i].health + " <br>(Attack: " + team1[i].attack + ")(Block: " + (team1[i].defense * 100).toFixed(0) + "%)(Crit Hit: " + (team1[i].critical * 100).toFixed(0) + "%)");
-			if (team1[i].health <= 100 && team1[i].health >80 ) {
-				$(".team1unitHP0").css("background-color", "pink").css("width", "100%");
-			}
-			if (team1[i].health <= 80 && team1[i].health > 60) {
-				$(".team1unitHP0").css("background-color", "pink").css("width", "80%");
-			}
-			if (team1[i].health <= 60 && team1[i].health > 40) {
-				$(".team1unitHP0").css("background-color", "pink").css("width", "60%");
-			}
-			if (team2[i].health <= 40 && team1[i].health > 20) {
-				$(".team1unitHP0").css("background-color", "pink").css("width", "40%");
-			}
-			if (team1[i].health <= 20 && team1[i].health > 0) {
-				$(".team1unitHP0").css("background-color", "pink").css("width", "20%");
-			}
-			
 
 		}
+		hpBars(i);
 	}
 
 	//display team 2 health
@@ -203,14 +214,16 @@ function render() {
 			$(".team2Stats" + i).html("<p class='kia'>KIA</p>");
 		} else {
 			$(".team2Stats" + i).html("<div class='teamStats'><p class='team2unitName'>"
-                + team2[i].name + "</p><p class='team2unitHP0'>"
+                + team2[i].name + "</p><p class='team2unitHP" + i + "'>"
                 + team2[i].health + "</p><p class='team2unit'>(Attack: "
                 + team2[i].attack + ")(Block: "
                 + (team2[i].defense * 100).toFixed(0) + "%)(Crit Hit: "
                 + (team2[i].critical * 100).toFixed(0) + "%)</p></div");
 			// $(".team2unit" + i).html(team2[i].name + " | health: " + team2[i].health + " <br>(Attack: " + team2[i].attack + ")(Block: " + (team2[i].defense * 100).toFixed(0) + "%)(Crit Hit: " + (team2[i].critical * 100).toFixed(0) + "%)");
 		}
+		hpBars(i);
 	}
+
 }
 
 render();
