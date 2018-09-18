@@ -1,7 +1,7 @@
 var team1 = [
 	{
 		name: "B-1 Lancer (General)",
-		health: 100,
+		health: 350,
 		attack: Math.ceil(Math.random() * 40 + 10),
 		defense: Math.random() * .9,
 		critical: Math.random() * .35
@@ -74,7 +74,7 @@ var team1 = [
 var team2 = [
 	{
 		name: "Tu-160 White Swan (General)",
-		health: 100,
+		health: 350,
 		attack: Math.ceil(Math.random() * 40 + 10),
 		defense: Math.random() * .9,
 		critical: Math.random() * .35
@@ -144,31 +144,49 @@ var team2 = [
 	}
 ];
 function hpBars(i) {
-	if (team1[i].health >= 50) {
+	if (team1[i].health <= 100 && team1[i].health > 60) {
 		$(".team1unitHP" + i).css("background-color", "green").css("width", "100%");
 	}
-	if (team1[i].health < 50) {
-		$(".team1unitHP" + i).css("background-color", "red").css("width", "50%");
+	if (team1[i].health <= 60 && team1[i].health > 30) {
+		$(".team1unitHP" + i).css("background-color", "yellow").css("width", "60%");
+	}
+	if (team1[i].health <= 30 && team1[i].health > 0) {
+		$(".team1unitHP" + i).css("background-color", "red").css("width", "30%");
 	}
     
-	if (team2[i].health >= 50) {
+
+	if (team2[i].health <= 100 && team2[i].health > 60) {
 		$(".team2unitHP" + i).css("background-color", "green").css("width", "100%");
 	}
-	if (team2[i].health < 50) {
-		$(".team2unitHP" + i).css("background-color", "red").css("width", "50%");
+	if (team2[i].health <= 60 && team2[i].health > 30) {
+		$(".team2unitHP" + i).css("background-color", "yellow").css("width", "60%");
 	}
-	// if (team1[i].health <= 80 && team1[i].health > 60) {
-	// 	$(".team1unitHP" + i).css("background-color", "pink").css("width", "80%");
-	// }
-	// if (team1[i].health <= 60 && team1[i].health > 40) {
-	// 	$(".team1unitHP" + i).css("background-color", "pink").css("width", "60%");
-	// }
-	// if (team2[i].health <= 40 && team1[i].health > 20) {
-	// 	$(".team1unitHP" + i).css("background-color", "pink").css("width", "40%");
-	// }
-	// if (team1[i].health <= 20 && team1[i].health > 0) {
-	// 	$(".team1unitHP" + i).css("background-color", "pink").css("width", "20%");
-	// }
+	if (team2[i].health <= 30 && team2[i].health > 0) {
+		$(".team2unitHP" + i).css("background-color", "red").css("width", "30%");
+    }
+    
+    //Team 1 General HP bar
+    if (team1[0].health <= 350 && team1[0].health > 210) {
+		$(".team1unitHP0").css("background-color", "green").css("width", "100%");
+	}
+	if (team1[0].health <= 210 && team1[0].health > 126) {
+		$(".team1unitHP0").css("background-color", "yellow").css("width", "60%");
+	}
+	if (team1[0].health <= 126 && team1[0].health > 0) {
+		$(".team1unitHP0").css("background-color", "red").css("width", "30%");
+    }
+    
+    //Team 2 General HP bar
+    if (team2[0].health <= 350 && team2[0].health > 210) {
+		$(".team2unitHP0").css("background-color", "green").css("width", "100%");
+	}
+	if (team2[0].health <= 210 && team2[0].health > 126) {
+		$(".team2unitHP0").css("background-color", "yellow").css("width", "60%");
+	}
+	if (team2[0].health <= 126 && team2[0].health > 0) {
+		$(".team2unitHP0").css("background-color", "red").css("width", "30%");
+	}
+
 }
 function render() {
 	//remove negative numbers and replace them with 0
@@ -228,7 +246,8 @@ function render() {
 
 render();
 //fight engine
-$(".fight").click(function () {
+$(".fight").click(function (event) {
+	event.preventDefault();
 	// loop through team 1's units
 	for (let i = 0; i < team1.length; i++) {
 		// generate rolls for both teams
