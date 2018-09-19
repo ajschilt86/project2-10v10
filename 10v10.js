@@ -218,7 +218,8 @@ function render() {
 	var team1Health = 0;
 	for (let i = 0; i < team1.length; i++) {
 		if (team1[i].health <= 0) {
-			$(".team1Stats" + i).html("<p class='kia'>KIA</p>");
+			$(".t1p" + i).hide();
+			$(".team1Stats" + i).html("<p class='kia'>" + team1[i].name + " was KIA!</p>");  
 		} else {
 			$(".team1Stats" + i).html("<div class='teamStats'><p class='team1unitName'>"
                 + team1[i].name + "</p><p class='team1unitHP" + i + "'>"
@@ -253,7 +254,8 @@ function render() {
 	var team2Health = 0;
 	for (let i = 0; i < team2.length; i++) {
 		if (team2[i].health <= 0) {
-			$(".team2Stats" + i).html("<p class='kia'>KIA</p>");
+            
+			$(".team2Stats" + i).html("<p class='kia'>" + team2[i].name + " was KIA!</p>");            
 		} else {
 			$(".team2Stats" + i).html("<div class='teamStats'><p class='team2unitName'>"
                 + team2[i].name + "</p><p class='team2unitHP" + i + "'>"
