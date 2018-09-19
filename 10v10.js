@@ -214,8 +214,8 @@ function render() {
 	var team1Crit = 0;
 	var team1CritAvg = 0;
 	var team1Dodge = 0;
-    var team1DodgeAvg = 0;
-    var team1Health = 0;
+	var team1DodgeAvg = 0;
+	var team1Health = 0;
 	for (let i = 0; i < team1.length; i++) {
 		if (team1[i].health <= 0) {
 			$(".team1Stats" + i).html("<p class='kia'>KIA</p>");
@@ -231,8 +231,8 @@ function render() {
 		}		
 		team1Attack = team1Attack + team1[i].attack;
 		team1Crit = team1Crit + team1[i].critical;
-        team1Dodge = team1Dodge + team1[i].defense;
-        team1Health = team1Health + team1[i].health;
+		team1Dodge = team1Dodge + team1[i].defense;
+		team1Health = team1Health + team1[i].health;
         
 
 		hpBars(i);
@@ -240,17 +240,17 @@ function render() {
 	team1CritAvg = team1Crit / team1.length;
 	team1DodgeAvg = team1Dodge / team1.length;
 	$(".tOneTotalAttack").html(team1Attack);
-    $(".tOneTotalCrit").html((team1CritAvg * 100).toFixed(0) + "%");
-    $(".tOneTotalDodge").html((team1DodgeAvg * 100).toFixed(0) + "%");
-    $(".tOneTotalHealth").html(team1Health);
+	$(".tOneTotalCrit").html((team1CritAvg * 100).toFixed(0) + "%");
+	$(".tOneTotalDodge").html((team1DodgeAvg * 100).toFixed(0) + "%");
+	$(".tOneTotalHealth").html(team1Health);
 
 	//display team 2 health
 	var team2Attack = 0;
 	var team2Crit = 0;
 	var team2CritAvg = 0;
 	var team2Dodge = 0;
-    var team2DodgeAvg = 0;
-    var team2Health = 0;
+	var team2DodgeAvg = 0;
+	var team2Health = 0;
 	for (let i = 0; i < team2.length; i++) {
 		if (team2[i].health <= 0) {
 			$(".team2Stats" + i).html("<p class='kia'>KIA</p>");
@@ -265,16 +265,16 @@ function render() {
 		}
 		team2Attack = team2Attack + team2[i].attack;
 		team2Crit = team2Crit + team2[i].critical;
-        team2Dodge = team2Dodge + team2[i].defense;
-        team2Health = team2Health + team2[i].health;
+		team2Dodge = team2Dodge + team2[i].defense;
+		team2Health = team2Health + team2[i].health;
 		hpBars(i);
-    }
-    team2CritAvg = team2Crit / team2.length;
+	}
+	team2CritAvg = team2Crit / team2.length;
 	team2DodgeAvg = team2Dodge / team2.length;
-    $(".tTwoTotalAttack").html(team2Attack);
-    $(".tTwoTotalCrit").html((team2CritAvg * 100).toFixed(0) + "%");
-    $(".tTwoTotalDodge").html((team2DodgeAvg * 100).toFixed(0) + "%");
-    $(".tTwoTotalHealth").html(team2Health);
+	$(".tTwoTotalAttack").html(team2Attack);
+	$(".tTwoTotalCrit").html((team2CritAvg * 100).toFixed(0) + "%");
+	$(".tTwoTotalDodge").html((team2DodgeAvg * 100).toFixed(0) + "%");
+	$(".tTwoTotalHealth").html(team2Health);
 
 
 }
