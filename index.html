@@ -23,14 +23,17 @@
 </head>
 
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="seaOfClouds.mp4" type="video/mp4">
+    </video>
     <div class="container">
 
         <div class="row">
 
-            <div class="col-4" style="background-color: lightgreen;">
+            <div class="col-4 unitWrapper" style="background-color: #7f7b82;">
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="b1lancer.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="b1lancer.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team1Stats0 teamStats">
@@ -42,8 +45,8 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="f-15.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="f-15.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team1Stats1 teamStats">
@@ -54,8 +57,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="f-15.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="f-15.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team1Stats2 teamStats">
@@ -66,8 +69,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="f-15.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="f-15.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team1Stats3 teamStats">
@@ -78,8 +81,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="f-15.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="f-15.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team1Stats4 teamStats">
@@ -90,8 +93,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="f-15.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="f-15.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team1Stats5 teamStats">
@@ -102,8 +105,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="f-15.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="f-15.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team1Stats6 teamStats">
@@ -114,8 +117,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="f-15.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="f-15.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team1Stats7 teamStats">
@@ -126,8 +129,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="f-15.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="f-15.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team1Stats8 teamStats">
@@ -138,8 +141,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="f-15.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="f-15.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team1Stats9 teamStats">
@@ -151,26 +154,26 @@
                 </div>
                 <div class="dice1"></div>
             </div>
-            <div class="col-4">
-                <h1>FIGHT TO THE DEATH</h1>
-                <p class="mid">Click fight to roll the dice and see who attacks who</p>
-                <button class="fight" style="width: 300px; height:50px;">Fight</button>
-                <table>
-                    <tr>
-                        <th class="team ts">Team</th>
-                        <th class="teamAttack ts">Health</th>
-                        <th class="teamCrit ts">Attack</th>
-                        <th class="teamDodge ts">Crit</th>
-                        <th class="teamHealth ts">Dodge</th>
+            <div class="col-4 text-center">
+                <h1 class="title">FIGHT TO THE DEATH</h1>
+                <p class="titleWording">Click fight to roll the dice and see who attacks who</p>
+                <button class="fight fightBtn btn btn-primary" style="width: 300px; height:50px;">Fight</button>
+                <table class="mainTable text-centered">
+                    <tr class="tableHeads">
+                        <th class="team tableStats">Team</th>
+                        <th class="teamAttack tableStats">Health</th>
+                        <th class="teamCrit tableStats">Attack</th>
+                        <th class="teamDodge tableStats">Crit</th>
+                        <th class="teamHealth tableStats">Dodge</th>
                     </tr>
-                    <tr>
+                    <tr class="tabledata1">
                         <td class="tOneTotalTeam">1</td>
                         <td class="tOneTotalHealth"></td>
                         <td class="tOneTotalAttack"></td>
                         <td class="tOneTotalCrit"></td>
                         <td class="tOneTotalDodge"></td>
                     </tr>
-                    <tr>
+                    <tr class="tabledata2">
                         <td class="tTwoTotalTeam">2</td>
                         <td class="tTwoTotalHealth"></td>
                         <td class="tTwoTotalAttack"></td>
@@ -181,10 +184,10 @@
 
                 </table>
             </div>
-            <div class="col-4" style="background-color: lightblue;">
+            <div class="col-4 unitWrapper" style="background-color: #7f7b82;">
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="tu-160.jpg" width="60px" class="t1p0">
+                    <div class="col-2 picWrapper">
+                        <img src="tu-160.jpg" width="60px" class="t1p0 img">
                     </div>
                     <div class="col-10">
                         <div class="team2Stats0 teamStats">
@@ -196,8 +199,8 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="su-35.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="su-35.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team2Stats1 teamStats">
@@ -208,8 +211,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="su-35.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="su-35.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team2Stats2 teamStats">
@@ -220,8 +223,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="su-35.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="su-35.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team2Stats3 teamStats">
@@ -232,8 +235,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="su-35.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="su-35.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team2Stats4 teamStats">
@@ -244,8 +247,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="su-35.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="su-35.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team2Stats5 teamStats">
@@ -256,8 +259,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="su-35.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="su-35.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team2Stats6 teamStats">
@@ -268,8 +271,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="su-35.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="su-35.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team2Stats7 teamStats">
@@ -280,8 +283,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="su-35.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="su-35.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team2Stats8 teamStats">
@@ -292,8 +295,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 testing">
-                        <img src="su-35.jpg" width="60px">
+                    <div class="col-2 picWrapper">
+                        <img src="su-35.jpg" width="60px" class="img">
                     </div>
                     <div class="col-10">
                         <div class="team2Stats9 teamStats">
